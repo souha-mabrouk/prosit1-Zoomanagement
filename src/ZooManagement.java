@@ -15,7 +15,7 @@ public class ZooManagement {
         zoo.zooName = scanner.nextLine();*/
         do {
             System.out.println("Donner le nom du zoo :");
-            zoo.zooName = scanner.nextLine(); // supprime les espaces en début/fin
+            zoo.zooName = scanner.nextLine();
             if (zoo.zooName.isEmpty()) {
                 System.out.println("Erreur : le nom du zoo ne peut pas être vide !");
             }
@@ -24,9 +24,9 @@ public class ZooManagement {
         zoo.nbrCages = scanner.nextInt();*/
         do {
             System.out.println("Donner le nombre des cages :");
-            while (!scanner.hasNextInt()) { // vérifier que c'est un entier
+            while (!scanner.hasNextInt()) {
                 System.out.println("Erreur : veuillez entrer un ENTIER positif !");
-                scanner.next(); // passer l'entrée invalide
+                scanner.next(); 
             }
             zoo.nbrCages = scanner.nextInt();
             if (zoo.nbrCages <= 0) {
