@@ -6,13 +6,11 @@ public class ZooManagement {
 
     //ZooManagement zoo=new ZooManagement();
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         //sSystem.out.println(zooName + " comporte " + nbrCages + " cages.");
 
-        ZooManagement zoo = new ZooManagement();
-        Scanner scanner = new Scanner(System.in);
-        /*System.out.println("donner le nom de zoo");
-        zoo.zooName = scanner.nextLine();*/
+        ZooManagement zoo = new ZooManagement();*/
+        /*Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("Donner le nom du zoo :");
             zoo.zooName = scanner.nextLine();
@@ -20,13 +18,11 @@ public class ZooManagement {
                 System.out.println("Erreur : le nom du zoo ne peut pas être vide !");
             }
         } while (zoo.zooName.isEmpty());
-        /*System.out.println("donner le nombre des cages");
-        zoo.nbrCages = scanner.nextInt();*/
         do {
             System.out.println("Donner le nombre des cages :");
             while (!scanner.hasNextInt()) {
                 System.out.println("Erreur : veuillez entrer un ENTIER positif !");
-                scanner.next(); 
+                scanner.next();
             }
             zoo.nbrCages = scanner.nextInt();
             if (zoo.nbrCages <= 0) {
@@ -34,8 +30,11 @@ public class ZooManagement {
             }
         } while (zoo.nbrCages <= 0);
         System.out.println(zoo.zooName + " comporte " + zoo.nbrCages + " cages.");
-    }
+    */
+        /*Animal lion=new Animal("Felidae","simba",10,true);
+        Zoo suezoo=new Zoo("belvedere",
+                "tunis",
+                100);
+
+    }*/
 }
- /*public static void main (String [] args) {
-     System.out.println( zooName + "comporte" + nbrCages + "cages.");
- }*/
