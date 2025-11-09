@@ -87,6 +87,11 @@ public class main {
         zoo1.displayAnimals();
         zoo2.displayAnimals();
 
+        Aquatic fish = new Aquatic("Poisson", "Nemo", 2, false, "Ocean");
+        Aquatic daulphin = new Aquatic("Dauphin", "dido", 5, true, "sea");
+        Aquatic shark = new Aquatic("Requin", "adaulph", 8, false, "Ocean");
+
+
 
 
     }

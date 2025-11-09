@@ -4,6 +4,8 @@ public class Zoo {
     String city;
     static final int nbrCages=25;
     int compteurAnimaux = 0;
+    Aquatic[] aquaticAnimals = new Aquatic[10];
+    private int count;
 
     public Zoo(String name, String city, int nbrCages) {
         this.name = name;
@@ -14,7 +16,7 @@ public class Zoo {
 
     public boolean addAnimal(Animal animal) {
 
-        if (compteurAnimaux >= animals.length) {
+        if (isZooFull()) {
             System.out.println("the Zoo is full we Cannot add " + animal.name);
             return false;
         }
@@ -85,6 +87,16 @@ public class Zoo {
             return z1;
         } else {
             return z2;
+        }
+    }
+
+    public void addAquaticAnimal(Aquatic aquatic) {
+        if (count < aquaticAnimals.length) {
+            aquaticAnimals[count] = aquatic;
+            count++;
+            System.out.println(aquatic.name + " a été ajouté au zoo !");
+        } else {
+            System.out.println("Le zoo est plein, impossible d’ajouter " + aquatic.name);
         }
     }
 
