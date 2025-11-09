@@ -38,45 +38,69 @@ public class main {
         suezoo.displayZoo();
         System.out.println(suezoo) ;
         System.out.println(suezoo.toString()) ;
-        System.out.println(suezoo.addAnimal(lion));
-        System.out.println(suezoo.addAnimal(turtle));
-        System.out.println(suezoo.addAnimal(panda));
-        System.out.println(suezoo.addAnimal(snake));
+        try {
+            suezoo.addAnimal(lion);
+        } catch (ZooFullException | InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
 
+        try {
+            suezoo.addAnimal(turtle);
+        } catch (ZooFullException | InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
 
+        try {
+            suezoo.addAnimal(panda);
+        } catch (ZooFullException | InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
+
+        try {
+            suezoo.addAnimal(snake);
+        } catch (ZooFullException | InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
 
 
         suezoo.displayZoo();
-       suezoo.displayAnimals();
+        suezoo.displayAnimals();
 
 
         int index1 = suezoo.searchAnimal(lion);
         System.out.println("index1= " + index1);
-        Animal python=new Animal("Elapidae","viper",6,false);
+
+        Animal python = new Animal("Elapidae", "viper", 6, false);
         int index2 = suezoo.searchAnimal(python);
         System.out.println("index2= " + index2);
+
         int index3 = suezoo.searchAnimal(tiger);
         System.out.println("index3= " + index3);
 
+
         System.out.println("\nSuppression de lion");
-        boolean r1=suezoo.removeAnimal(lion);
+        boolean r1 = suezoo.removeAnimal(lion);
         System.out.println(r1);
+
         System.out.println("\nTentative de suppression d’un animal inexistant (Tiger)...");
         boolean r2 = suezoo.removeAnimal(new Animal("Feline", "roar", 4, true));
         System.out.println(r2);
+
         suezoo.displayAnimals();
+
         Zoo zoo1 = new Zoo("aniland", "Tozeur", 10);
         Zoo zoo2 = new Zoo("zooPark", "Sousse", 5);
 
 
+        Animal lionne = new Animal("Felidae", "scar", 5, true);
+        try {
+            zoo1.addAnimal(lionne);
+        } catch (ZooFullException | InvalidAgeException e) {
+            System.out.println("Erreur : " + e.getMessage());
+        }
 
-        Animal lionne=new Animal("Felidae", "scar", 5, true);
-        zoo1.addAnimal(lionne);
-        Animal wolf=new Animal("Canidae", "pipe", 3, true);
-        zoo1.addAnimal(lionne);
-        zoo2.addAnimal(new Animal("Elephantidae", "Dumbo", 10, true));
 
-        System.out.println("\n Is " + zoo1.name + " full? " + zoo1.isZooFull());
+        System.out.println("\nIs " + zoo1.name + " full? " + zoo1.isZooFull());
         System.out.println("Is " + zoo2.name + " full? " + zoo2.isZooFull());
 
 
@@ -84,13 +108,14 @@ public class main {
         System.out.println("\nThe zoo with more animals is: " + biggerZoo.name +
                 " with " + biggerZoo.animals.length + " animals.");
 
+
         zoo1.displayAnimals();
         zoo2.displayAnimals();
 
-        Aquatic fish = new Aquatic("Poisson", "Nemo", 2, false, "Ocean");
-        Aquatic daulphin = new Aquatic("Dauphin", "dido", 5, true, "sea");
-        Aquatic shark = new Aquatic("Requin", "adaulph", 8, false, "Ocean");
 
+        Aquatic fish = new Aquatic("Poisson", "Nemo", 2, false, "Ocean");
+        Aquatic dolphin = new Aquatic("Dauphin", "dido", 5, true, "Sea");
+        Aquatic shark = new Aquatic("Requin", "adaulph", 8, false, "Ocean");
 
 
 

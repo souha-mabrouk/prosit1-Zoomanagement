@@ -14,7 +14,7 @@ public class Zoo {
     }
 
 
-    public boolean addAnimal(Animal animal) {
+   /* public boolean addAnimal(Animal animal) {
 
         if (isZooFull()) {
             System.out.println("the Zoo is full we Cannot add " + animal.name);
@@ -32,7 +32,22 @@ public class Zoo {
         compteurAnimaux++;
         System.out.println(" Animal " + animal.name + " added successfully: "  );
         return true;
+    }*/
+
+    public void addAnimal(Animal animal) throws ZooFullException, InvalidAgeException {
+        if (animal.age < 0) {
+            throw new InvalidAgeException("Animal " + animal.name + " a un âge invalide : " + animal.age);
+        }
+
+        if (compteurAnimaux >= animals.length) {
+            throw new ZooFullException("Le zoo est plein. Impossible d'ajouter " + animal.name);
+        }
+
+        animals[compteurAnimaux] = animal;
+        compteurAnimaux++;
+        System.out.println("Animal " + animal.name + " ajouté avec succès.");
     }
+
 
     public void displayZoo() {
         System.out.println("The Zoo is named " + name + " it is located in " + city + " and contains " + nbrCages + " cages.");
