@@ -134,5 +134,10 @@ public class main {
         d.swim();
         p.swim();
 
+        fish.eatMeat(Food.MEAT);
+        fish.eatMeat(Food.PLANT);
+        fish.eatMeat(Food.MEAT);
+        fish.eatMeat(Food.PLANT);
+
     }
 }

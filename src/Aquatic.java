@@ -1,4 +1,4 @@
-public class Aquatic extends Animal {
+public class Aquatic extends Animal implements Carnivore<Food> {
     protected String habitat;
 
     public Aquatic() {
@@ -16,6 +16,15 @@ public class Aquatic extends Animal {
     }
     public void swim() {
         System.out.println("This aquatic animal is swimming.");
+    }
+
+    @Override
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT || meat == Food.BOTH) {
+            System.out.println(" is eating meat.");
+        } else {
+            System.out.println(" cannot eat this food.");
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-public class Terrestrial extends Animal {
+public class Terrestrial extends Animal implements Omnivore<Food>{
     protected int nbrLegs;
     public Terrestrial(){
         super();
@@ -12,5 +12,33 @@ public class Terrestrial extends Animal {
     public String toString() {
         return super.toString() + " nbrLegs=" + nbrLegs;
     }
+
+    @Override
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT || meat == Food.BOTH) {
+            System.out.println(" is eating meat.");
+        } else {
+            System.out.println(" cannot eat this food.");
+        }
+    }
+
+    @Override
+    public void eatPlant(Food plant) {
+        if (plant == Food.PLANT || plant == Food.BOTH) {
+            System.out.println(" is eating plants.");
+        } else {
+            System.out.println(" cannot eat this food.");
+        }
+    }
+
+    @Override
+    public void eatPlantAndMeat(Food food) {
+        if (food == Food.BOTH) {
+            System.out.println(" is eating both meat and plants.");
+        } else {
+            System.out.println(" cannot eat this food as mixed.");
+        }
+    }
+
 
 }
