@@ -116,8 +116,23 @@ public class main {
         Aquatic fish = new Aquatic("Poisson", "Nemo", 2, false, "Ocean");
         Aquatic dolphin = new Aquatic("Dauphin", "dido", 5, true, "Sea");
         Aquatic shark = new Aquatic("Requin", "adaulph", 8, false, "Ocean");
+        //Aquatic shark = new Aquatic("Requin", "adaulph", 8, false, "Ocean");
 
 
+        //prosit5
+        Aquatic starfish = new Aquatic("Poisson", "patrick", 2, false, "Ocean");
+        Terrestrial horse = new Terrestrial("Felidae","sugar",10,true,4);
+        Dolphin d = new Dolphin("Delphinidae", "Flipper", 5, true, "Mer", 45.5f);
+        Penguin p = new Penguin("Spheniscidae", "Pingo", 3, false, "Antarctique", 20.0f);
+
+        System.out.println(d);
+        System.out.println(p);
+        System.out.println(horse);
+        System.out.println(starfish);
+
+        starfish.swim();
+        d.swim();
+        p.swim();
 
     }
 }
