@@ -1,17 +1,17 @@
 import java.util.Objects;
 
-public class Employe {
+public class Employe implements Comparable<Employe>{
     private int id;
     private String nom;
     private String prenom;
     private String nomDepartement;
     private int grade;
 
-    // Constructeur sans paramètre
+
     public Employe() {
     }
 
-    // Constructeur avec paramètres
+
     public Employe(int id, String nom, String prenom, String nomDepartement, int grade) {
         this.id = id;
         this.nom = nom;
@@ -20,7 +20,7 @@ public class Employe {
         this.grade = grade;
     }
 
-    // Getters & Setters
+
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -36,7 +36,7 @@ public class Employe {
     public int getGrade() { return grade; }
     public void setGrade(int grade) { this.grade = grade; }
 
-    // Redéfinition de equals : égalité selon id et nom
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -45,7 +45,7 @@ public class Employe {
         return id == employe.id && Objects.equals(nom, employe.nom);
     }
 
-    // Redéfinition de toString
+
     @Override
     public String toString() {
         return "Employe{" +
@@ -56,4 +56,12 @@ public class Employe {
                 ", grade=" + grade +
                 '}';
     }
+
+
+
+    @Override
+    public int compareTo(Employe o) {
+        return this.getId() - o.getId();
+    }
 }
+

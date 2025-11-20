@@ -12,7 +12,7 @@ public class SocieteArrayList implements IGestion<Employe> {
 
     @Override
     public void ajouterEmploye(Employe e) {
-        listeEmployes.add(e);
+        this.listeEmployes.add(e);
         System.out.println("Employé ajouté : " + e);
     }
 
