@@ -6,17 +6,17 @@ public class main {
         DepartementHashSet gestion = new DepartementHashSet();
 
 
-        Departement d1 = new Departement(1, "Informatique", 30);
-        Departement d2 = new Departement(2, "Math", 20);
-        Departement d3 = new Departement(3, "chimie", 15);
-        Departement d4 = new Departement(1, "Informatique", 30);
+        Department d1 = new Department(1, "Informatique", 30);
+        Department d2 = new Department(2, "Math", 20);
+        Department d3 = new Department(3, "chimie", 15);
+        Department d4 = new Department(1, "Informatique", 30);
 
 
 
-        System.out.println("Ajout d1 : " + gestion.ajouterDepartement(d1));
-        System.out.println("Ajout d2 : " + gestion.ajouterDepartement(d2));
-        System.out.println("Ajout d3 : " + gestion.ajouterDepartement(d3));
-        System.out.println("Ajout d4 : " + gestion.ajouterDepartement(d4));
+        System.out.println("Ajout d1 : " +  IDepartment.ajouterDepartement(d1));
+        System.out.println("Ajout d2 : " +  IDepartment.ajouterDepartement(d2));
+        System.out.println("Ajout d3 : " +  IDepartment.ajouterDepartement(d3));
+        System.out.println("Ajout d4 : " +  IDepartment.ajouterDepartement(d4));
 
 
 
@@ -27,12 +27,12 @@ public class main {
         System.out.println("Recherche d1 : " + gestion.rechercherDepartement(d1)); // true
         System.out.println("Recherche d4 (clone de d1) : " + gestion.rechercherDepartement(d4)); // true
         System.out.println("Recherche d'un département inexistant : " +
-                gestion.rechercherDepartement(new Departement(10, "Inexistant", 0)));
+                gestion.rechercherDepartement(new Department(10, "Inexistant", 0)));
 
         // Test suppression
         System.out.println("\n=== TEST SUPPRESSION ===");
-        System.out.println("Suppression d2 : " + gestion.supprimerDepartement(d2)); // true
-        System.out.println("Suppression d2 encore : " + gestion.supprimerDepartement(d2)); // false
+        System.out.println("Suppression d2 : " + IDepartment.supprimerDepartement(d2)); // true
+        System.out.println("Suppression d2 encore : " +  IDepartment.supprimerDepartement(d2)); // false
 
 
 
